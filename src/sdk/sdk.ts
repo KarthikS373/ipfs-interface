@@ -25,7 +25,7 @@ const childrenQuery = (children: string[]) => (node: any) =>
   Array.isArray(node.children) && children.every(childId => node.children.includes(childId));
 const parentQuery = (parent: string) => (node: EncryptedNode) => node.parent === parent;
 
-export class Mogu {
+export class IPFSInterface {
   private state: Map<string, EncryptedNode>;
   private key: Uint8Array;
   private dbName: string;
@@ -205,7 +205,7 @@ export class Mogu {
   }
 }
 
-export class MoguOnChain extends Mogu {
+export class IPFSInterfaceOnChain extends IPFSInterface {
   private contract: ethers.Contract;
 
   private abi: any[] = [

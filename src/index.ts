@@ -1,1 +1,1 @@
-export { Mogu, MoguOnChain } from "./sdk/sdk";
+export { IPFSInterface, IPFSInterfaceOnChain } from "./sdk/sdk";
